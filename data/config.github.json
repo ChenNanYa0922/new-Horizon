@@ -124,7 +124,7 @@
   "request_body": {
     "msgtype": "markdown",
     "markdown": {
-      "content": "# Horizon AI 日报\n\n#{summary}"
+      "content": "# Horizon AI 日报\n\n#{summary?limit=1000&split=\n}"
     }
   },
   "headers": ""
