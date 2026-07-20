@@ -5,187 +5,176 @@ date: 2026-07-20
 lang: en
 ---
 
-> From 25 items, 8 important content pieces were selected
+> From 25 items, 7 important content pieces were selected
 
 ---
 
-1. [SRE builds $1,600 ESP32 bowling scorer, replacing $120k system](#item-1) ⭐️ 9.0/10
-2. [Xiaomi Unveils Humanoid Robot for Household Tasks](#item-2) ⭐️ 9.0/10
-3. [Sam Altman&\#x27;s 2022 Email on Open-Source Strategy](#item-3) ⭐️ 9.0/10
-4. [Moonshine: Headless Game Streaming Server with Custom Compositor](#item-4) ⭐️ 8.0/10
-5. [Airbus Leaves AWS: Geopolitical Cloud Shift](#item-5) ⭐️ 8.0/10
-6. [Kimi Halts New Subscriptions After K3 Overwhelms Compute](#item-6) ⭐️ 8.0/10
-7. [Hugging Face Discloses AI Agent Attack, Commercial LLMs Refuse Forensics Help](#item-7) ⭐️ 8.0/10
-8. [Trump Admin May Restrict US Firms from Using Chinese Open-Weight AI Models](#item-8) ⭐️ 8.0/10
+1. [Bowling center owner replaces $120k system with $1,600 ESP32s](#item-1) ⭐️ 9.0/10
+2. [EU to Share Sensitive Biometric Data with US for Visa-Free Travel](#item-2) ⭐️ 8.0/10
+3. [Moonshine Enables Headless Multi-Seat Game Streaming](#item-3) ⭐️ 8.0/10
+4. [Xiaomi Unveils Humanoid Robot for Complex Household Tasks](#item-4) ⭐️ 8.0/10
+5. [Kimi Pauses Subscriptions Due to GPU Overload](#item-5) ⭐️ 8.0/10
+6. [Hugging Face Reveals AI Agent Attack, Commercial LLMs Refuse Forensics](#item-6) ⭐️ 8.0/10
+7. [Trump administration may restrict US use of Chinese open-weight AI models](#item-7) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [SRE builds $1,600 ESP32 bowling scorer, replacing $120k system](https://news.ycombinator.com/item?id=48968606) ⭐️ 9.0/10
+## [Bowling center owner replaces $120k system with $1,600 ESP32s](https://news.ycombinator.com/item?id=48968606) ⭐️ 9.0/10
 
-A site reliability engineer \(SRE\) built an open-source bowling scoring system using ESP32 microcontrollers and a Raspberry Pi for $1,600 per 8 lanes, replacing a commercial system that cost $120,000. The project, called OpenLaneLink, uses ESPNow mesh networking with RS485 fallback and streams events to Redis for a React-based UI. This demonstrates that commodity open-source hardware can replace expensive proprietary systems in niche industries, potentially lowering barriers for small businesses and reducing vendor lock-in. If open-sourced, it could enable other bowling centers to slash maintenance and upgrade costs significantly. The system uses ESP32 nodes with IR break-beam sensors, relays, and optocouplers, connected via ESPNow star-topology mesh to a Raspberry Pi gateway over UART, with RS485 as a wired backup. All scoring logic runs on the Pi using Redis and a state machine, allowing any React developer to customize the UI and animations.
+A bowling center owner developed OpenLaneLink, an open-source scoring system using ESP32 microcontrollers and a Raspberry Pi, to replace a proprietary six-figure system at a fraction of the cost \($1,600 for 8 lanes\). This demonstrates how modern low-cost embedded systems can retrofitting expensive legacy equipment, significantly reducing costs for small businesses and challenging vendor lock-in in niche markets. It also provides a customizable, open-source alternative that could make bowling more affordable. The system uses an ESP-NOW star-topology mesh with RS485 as a wired fallback, a Raspberry Pi as a lane computer running Redis and a state machine, and a React-based UI with websocket communication. It can be built for about $200 per lane pair, and repairs take under 10 minutes.
 
 hackernews · section33 · Jul 19, 14:41
 
-**Background**: The ESP32 is a low-cost, dual-core microcontroller with built-in Wi-Fi and Bluetooth, widely used in IoT projects. Bowling scoring systems traditionally use camera-based pin detection or optical sensors to track fallen pins and calculate scores. Commercial systems often cost tens of thousands of dollars and rely on proprietary hardware and software, making upgrades and repairs expensive.
+**Background**: Commercial bowling scoring systems are proprietary, often costing over $100,000 for an 8-lane setup, with expensive replacement parts and vendor lock-in. ESP32 is a low-cost microcontroller with built-in Wi-Fi and Bluetooth, commonly used in IoT projects. ESP-NOW is a protocol for direct device-to-device communication without a router.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/ESP32">ESP32 - Wikipedia</a></li>
-<li><a href="https://mtsi.substack.com/p/pinspotters-the-bowling-tracker">Pinspotters: The Bowling Tracker - MTSI Pinspotters: The Bowling Tracker - Micro Technology Services ... US3847394A - Bowling pin detector - Google Patents AutoBowl - Automatic Bowling Scoring System GitHub - Mazen-980/Computer-Vision-Bowling-Detection: Real ... How to Score Bowling — Complete Guide &amp; Scoring Systems BMS PinCam - BMS Bowling</a></li>
+<li><a href="https://news.ycombinator.com/item?id=48968606">Show HN: I replaced a $120k bowling center system with $1,600 in ESP32s | Hacker News</a></li>
+<li><a href="https://zeli.app/en/story/48968606">OpenLaneLink - Open-source ESP32 bowling scoring system | Zeli</a></li>
+<li><a href="https://firnsy.com/projects/esp32-scoreboard">ESP32 Scoreboard - firnsy.com</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters praised the project, sharing similar experiences retrofitting old machinery with modern controllers. Some highlighted the potential to add features like DMX lighting and kiosk-style payment systems, while others reflected on the legacy of mechanical bowling machines and the satisfaction of replacing complex relay logic with simple microcontrollers.
+**Discussion**: The community expressed strong interest, with users sharing similar experiences retrofitting old equipment. Some asked about architectural decisions and hardware/software interfaces, while others discussed plans to add features like DMX lighting control and kiosk payment systems.
 
-**Tags**: `#hardware hacking`, `#embedded systems`, `#cost reduction`, `#ESP32`, `#bowling`
+**Tags**: `#embedded systems`, `#ESP32`, `#retrofit`, `#hardware hacking`, `#cost reduction`
 
 ---
 
 <a id="item-2"></a>
-## [Xiaomi Unveils Humanoid Robot for Household Tasks](https://robotics.xiaomi.com/xiaomi-robotics-1.html) ⭐️ 9.0/10
+## [EU to Share Sensitive Biometric Data with US for Visa-Free Travel](https://edri.org/our-work/the-eu-is-about-to-sell-our-most-sensitive-data-to-the-us-for-visa-free-travel/) ⭐️ 8.0/10
 
-Xiaomi unveiled a humanoid robot capable of complex household tasks such as folding laundry, demonstrating significant advances in bimanual manipulation and deformable object handling. This achievement marks a breakthrough in solving long-standing robotics challenges, potentially accelerating the adoption of household robots and reshaping the industry. The robot performs two-handed coordination, mobile manipulation, and handles deformable objects like clothing and bag zips, which are notoriously difficult tasks in robotics.
+The European Union is planning to share sensitive biometric data of its citizens with the United States as part of a visa-free travel agreement, raising significant privacy concerns. This policy could fundamentally change how personal biometric data is handled between major geopolitical entities, potentially setting a precedent for data-sharing agreements worldwide. Travelers may face increased surveillance and loss of control over their personal information. The data-sharing would likely apply to travelers using the US ESTA system and the upcoming EU ETIAS, both of which already collect biometric data at borders. Critics argue that transferring data between jurisdictions increases the risk of breaches and misuse.
 
-hackernews · ilreb · Jul 20, 04:45 · [Discussion](https://news.ycombinator.com/item?id=48974454)
+hackernews · rapnie · Jul 20, 12:14 · [Discussion](https://news.ycombinator.com/item?id=48977711)
 
-**Background**: Bimanual manipulation requires two robot arms to work together with precise coordination, while deformable object handling involves objects that change shape, making perception and control harder. These capabilities are critical for practical household robots.
+**Background**: The US ESTA \(Electronic System for Travel Authorization\) requires visa-exempt travelers to provide personal information and biometric data before boarding flights to the US. Similarly, the EU is developing ETIAS \(European Travel Information and Authorisation System\), set to launch in late 2026, which will collect biometric data from visa-exempt visitors to the Schengen Area. Both systems aim to enhance security but have raised privacy concerns.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://vnrobo.com/en/blog/manip-series-6-bimanual">Bimanual Manipulation : Teaching Robots to Use Both Arms | VnRobo</a></li>
-<li><a href="https://www.researchgate.net/publication/325750084_Robotic_Manipulation_and_Sensing_of_Deformable_Objects_in_Domestic_and_Industrial_Applications_A_Survey">(PDF) Robotic Manipulation and Sensing of Deformable Objects in...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/European_Travel_Information_and_Authorisation_System">European Travel Information and Authorisation System - Wikipedia</a></li>
+<li><a href="https://esta.cbp.dhs.gov/">Official ESTA Application Website, U.S. Customs and Border Protection</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The community largely reacted with excitement and technical appreciation, with users noting the challenge of bimanual coordination and deformable objects. Some discussed future implications like additional limbs or societal impacts.
+**Discussion**: Comments on Hacker News show a divide: some argue that biometric data is already collected at borders, so sharing it is practical and reduces hassle, while others strongly object to giving away personal data without consent. Many express concerns about the erosion of privacy and the potential for misuse.
 
-**Tags**: `#robotics`, `#AI`, `#Xiaomi`, `#humanoid`, `#manipulation`
+**Tags**: `#privacy`, `#biometric data`, `#EU`, `#US`, `#border security`
 
 ---
 
 <a id="item-3"></a>
-## [Sam Altman&\#x27;s 2022 Email on Open-Source Strategy](https://simonwillison.net/2026/Jul/20/sam-altman/#atom-everything) ⭐️ 9.0/10
+## [Moonshine Enables Headless Multi-Seat Game Streaming](https://github.com/hgaiser/moonshine) ⭐️ 8.0/10
 
-An email from Sam Altman to OpenAI&\#x27;s board in October 2022, revealed in a 2026 legal case, proposes releasing a GPT-3-level open-source model that can run on consumer hardware to preempt competitors like Stability AI and discourage new funding. This email provides direct insight into OpenAI&\#x27;s strategic rationale for open-sourcing models, highlighting how competitive dynamics influenced their decision-making, which is crucial for understanding the evolution of the AI industry and the debate around open-source AI. The email was written on October 1, 2022, and was exposed as part of the Musk v. Altman lawsuit in 2026. Altman specifically mentions releasing a model with approximate GPT-3 capability that runs locally on consumer hardware before Stability or others do.
+Moonshine is a new open-source game streaming server that creates its own compositor, enabling headless operation and multi-seat streaming without a running desktop environment. This innovation solves a major pain point in game streaming by allowing multiple users to stream simultaneously while leaving the host PC free for other tasks, advancing open-source streaming beyond what Sunshine/Moonlight offers. Moonshine implements the NVIDIA GameStream protocol similar to Sunshine but with its own compositor, supporting headless systems and multiple concurrent sessions with virtual displays that don&\#x27;t affect the logged-in user session.
 
-rss · Simon Willison · Jul 20, 03:47
+hackernews · wertyk · Jul 20, 00:16 · [Discussion](https://news.ycombinator.com/item?id=48972970)
 
-**Background**: GPT-3 is a large language model developed by OpenAI that can generate human-like text. Open-source AI models are released with public source code and weights, allowing anyone to run them on their own hardware. At the time, Stability AI \(known for Stable Diffusion\) was gaining attention for open-source image generation, and OpenAI faced pressure to compete in the open-source space.
+**Background**: Game streaming with Sunshine and Moonlight is popular but requires a desktop environment and occupies the host screen. Moonshine creates its own compositor, enabling headless \(no monitor needed\) and multi-seat streaming. Headless computers operate without a display, while a compositor manages rendering in Linux display servers.
 
-**Tags**: `#open-source`, `#GPT-3`, `#OpenAI`, `#strategy`, `#AI-ethics`
+<details><summary>References</summary>
+<ul>
+<li><a href="https://niquette.ca/articles/sunshine-moonlight/">How to get started with in-home game streaming using Sunshine and...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Headless_computer">Headless computer - Wikipedia</a></li>
+<li><a href="https://dev.to/sandheep_kumarpatro_1c48/beyond-the-basics-in-depth-look-at-linux-display-servers-window-managers-and-compositors-40bk">Beyond the Basics: In-Depth Look at Linux Display Servers , Window...</a></li>
+
+</ul>
+</details>
+
+**Discussion**: The community is highly engaged, with the creator answering questions. Users praise the headless and multi-seat improvements, noting evolution from GameStream to Sunshine to Moonshine, and some discuss use cases like remote development VMs.
+
+**Tags**: `#game streaming`, `#open source`, `#Moonlight`, `#Sunshine`, `#compositor`
 
 ---
 
 <a id="item-4"></a>
-## [Moonshine: Headless Game Streaming Server with Custom Compositor](https://github.com/hgaiser/moonshine) ⭐️ 8.0/10
+## [Xiaomi Unveils Humanoid Robot for Complex Household Tasks](https://robotics.xiaomi.com/xiaomi-robotics-1.html) ⭐️ 8.0/10
 
-Moonshine is a new open-source game streaming server that creates its own compositor, allowing headless streaming without requiring a running desktop environment. It implements the Moonlight protocol, enabling low-latency game streaming to any device running Moonlight. This solves a key limitation of existing solutions like Sunshine, which require a desktop environment to be active, making the host machine unusable for other tasks. Moonshine enables dedicated, multi-seat or remote gaming setups without impacting the host user&\#x27;s session. Moonshine runs headless, meaning it can operate on a server without a monitor or keyboard. It creates a virtual display via its custom compositor, and uses the Moonlight protocol for client-server communication, which is known for low latency.
+Xiaomi has unveiled a humanoid robot capable of performing complex household tasks such as folding laundry, demonstrating significant progress in bimanual coordination and deformable object manipulation. This advancement pushes the boundaries of robotics into everyday household chores, potentially revolutionizing home automation and reducing the burden of domestic labor. The robot showcases bimanual coordination, mobile manipulation, and handling of deformable objects like fabric, which are notoriously challenging in robotics. It also performs multi-object single-grasp tasks.
 
-hackernews · wertyk · Jul 20, 00:16 · [Discussion](https://news.ycombinator.com/item?id=48972970)
+hackernews · ilreb · Jul 20, 04:45 · [Discussion](https://news.ycombinator.com/item?id=48974454)
 
-**Background**: Game streaming relies on a server encoding and streaming game visuals to a remote client. Traditional solutions like Sunshine require an active desktop session to capture frames, which means the host&\#x27;s display must be turned on and unusable for other work. Compositors manage graphical output; a custom compositor like Moonshine&\#x27;s can output frames directly to an encoder without needing a physical display or desktop environment.
+**Background**: Bimanual coordination refers to the orchestrated movement of two hands to achieve a goal, requiring careful synchronization. Deformable object manipulation \(DOM\) involves handling non-rigid materials like cloth, which change shape unpredictably, making perception and control difficult. Both are active research areas in robotics.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://wiki.archlinux.org/title/Gamescope">Gamescope - ArchWiki</a></li>
-<li><a href="https://gist.github.com/Alistair1231/6e867021a47b72f75caa914aa9c563af">Headless Moonlight Streaming PC · GitHub</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bimanual_coordination">Bimanual coordination</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12430959/">Deformable and Fragile Object Manipulation : A Review and...</a></li>
+<li><a href="https://arxiv.org/html/2602.22998v1">A Perspective on Open Challenges in Deformable Object Manipulation</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The creator \(hgaiser\) explained that Moonshine differs from Sunshine by creating its own compositor, enabling headless streaming without a desktop. Users noted that Moonshine solves the problem of the host display being occupied, which was a drawback of Sunshine/Moonlight. The community showed strong positive interest, with 272 points and 110 comments indicating validation.
+**Discussion**: The HN community was highly enthusiastic, with users praising the progress on hard problems like deformable objects and bimanual coordination. Some noted the potential for robots to automate domestic tasks, while others speculated about future implications. A few comments expressed cautious optimism about the pace of AI advancement.
 
-**Tags**: `#game streaming`, `#open source`, `#moonlight`, `#headless`, `#compositor`
+**Tags**: `#robotics`, `#AI`, `#humanoid`, `#Xiaomi`, `#household automation`
 
 ---
 
 <a id="item-5"></a>
-## [Airbus Leaves AWS: Geopolitical Cloud Shift](https://www.theregister.com/columnists/2026/07/20/airbus-takes-flight-from-aws-what-happens-next-is-critical/5274109) ⭐️ 8.0/10
+## [Kimi Pauses Subscriptions Due to GPU Overload](https://mp.weixin.qq.com/s/EPs028Zj1DiYaOk_01-JFQ) ⭐️ 8.0/10
 
-Airbus is reportedly moving its cloud workloads away from Amazon Web Services \(AWS\), a decision driven by geopolitical concerns and data sovereignty issues, according to an opinion piece in The Register. This move signals a broader shift in the tech industry where companies are reconsidering reliance on US cloud providers due to foreign policy and data privacy risks, potentially reshaping the global cloud market and affecting US-based small businesses. The article notes that Airbus&\#x27;s departure from AWS highlights increasing concerns about US surveillance and the impact of the Schrems II ruling on data transfers. Community comments also point to a rise in customers preferring European suppliers over US ones.
-
-hackernews · bbg2401 · Jul 20, 10:12 · [Discussion](https://news.ycombinator.com/item?id=48976682)
-
-**Background**: The Schrems II ruling in 2020 invalidated the EU-US Privacy Shield, making data transfers to the US legally uncertain due to US surveillance programs. In response, European initiatives like GAIA-X aim to create a federated and sovereign data infrastructure for Europe. Airbus&\#x27;s decision is part of a larger trend where European companies seek to reduce dependence on US cloud services.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Gaia-X">Gaia-X - Wikipedia</a></li>
-<li><a href="https://www.gdprsummary.com/schrems-ii/">Schrems II a summary - all you need to know - GDPR Summary</a></li>
-
-</ul>
-</details>
-
-**Discussion**: Community comments express concern about the impact on US small businesses, with one commenter noting an increasing number of customers leaving for European competitors due to US foreign policy. Another comment criticizes US tech for self-inflicted damage, while a third questions why Airbus uses commercial cloud services at all given espionage risks.
-
-**Tags**: `#cloud computing`, `#geopolitics`, `#AWS`, `#Airbus`, `#tech industry`
-
----
-
-<a id="item-6"></a>
-## [Kimi Halts New Subscriptions After K3 Overwhelms Compute](https://mp.weixin.qq.com/s/EPs028Zj1DiYaOk_01-JFQ) ⭐️ 8.0/10
-
-Moonshot AI announced on July 19 that it is immediately suspending new user subscriptions and membership activation for Kimi&\#x27;s consumer version due to overwhelming demand after the release of the Kimi K3 model. This incident highlights the intense compute capacity constraints facing AI companies as model scale and user adoption surge. It signals that even well-funded startups can struggle to keep up with demand, potentially impacting user trust and growth. The company stated that user request volumes in the past 48 hours have far exceeded estimates and are approaching the limits of existing clusters. Moonshot AI is prioritizing existing subscribers by allocating all current compute to them while racing to expand capacity.
+Moonshot AI announced on July 19, 2026 that it is suspending new subscriptions for its Kimi chatbot after the launch of the K3 model caused demand to overwhelm available GPU capacity within 48 hours. This highlights the real-world scaling challenges for large AI models, affecting both user access and business operations. It underscores the critical importance of compute infrastructure for AI companies. Kimi K3 is a 2.8 trillion-parameter model with native multimodality and 1M-token context, using Mixture of Experts architecture. Moonshot AI is prioritizing existing users while accelerating compute expansion.
 
 telegram · zaihuapd · Jul 19, 15:02
 
-**Background**: Kimi is an AI assistant developed by Chinese startup Moonshot AI, featuring long-context capabilities. Kimi K3 is Moonshot AI&\#x27;s latest flagship model with 2.8 trillion parameters, a 1M-token context window, and multimodal reasoning, rivaling top US models. The model&\#x27;s launch triggered unexpectedly high demand, leading to the subscription pause.
+**Background**: Kimi is a Chinese AI chatbot and large language model developed by Moonshot AI. The company released the open-weights Kimi K2 in July 2025, followed by the flagship K3 in July 2026. The K3 model is the world&\#x27;s largest open-weight model, built with hybrid linear attention and attention residuals.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Kimi_%28chatbot%29">Kimi (chatbot) - Wikipedia</a></li>
-<li><a href="https://www.cnbc.com/2026/07/17/moonshot-ai-kimi-k3-model-openai-anthropic-china.html">China&#x27;s Moonshot AI unveils Kimi K3 that rivals OpenAI, Anthropic</a></li>
-<li><a href="https://www.moonshot.ai/">Moonshot AI</a></li>
+<li><a href="https://cryptobriefing.com/kimi-k3-gpu-capacity-crunch-moonshot-ai/">Kimi K3 faces GPU capacity crunch as demand overwhelms Moonshot AI&#x27;s infrastructure</a></li>
+<li><a href="https://www.kimi.com/blog/kimi-k3">Kimi K3 Tech Blog: Open Frontier Intelligence</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI`, `#compute`, `#capacity`, `#Kimi`, `#LLM`
+**Tags**: `#AI`, `#LLM`, `#product scaling`, `#compute capacity`, `#Kimi`
+
+---
+
+<a id="item-6"></a>
+## [Hugging Face Reveals AI Agent Attack, Commercial LLMs Refuse Forensics](https://huggingface.co/blog/security-incident-july-2026) ⭐️ 8.0/10
+
+Hugging Face disclosed a July 2026 security incident in which an AI agent framework exploited two code execution vulnerabilities in its data processing pipeline, compromising internal systems and stealing datasets and service credentials. During forensic analysis, commercial LLM APIs refused to assist due to safety guardrails, while a locally deployed GLM 5.2 model successfully analyzed over 17,000 attack records. This incident highlights a novel attack vector using autonomous AI agents to breach AI infrastructure, and it exposes a critical limitation of commercial LLMs in security forensics. The findings underscore the need for organizations to maintain local AI capabilities for incident response and to guard against AI-driven supply chain attacks. The attack occurred over a weekend, executing tens of thousands of operations and laterally moving to multiple internal clusters. Hugging Face confirmed that public-facing models, datasets, and Spaces were not tampered with, and the software supply chain showed no anomalies. The company has fixed the vulnerabilities, evicted attackers, rebuilt compromised nodes, and rotated affected credentials.
+
+telegram · zaihuapd · Jul 20, 10:41
+
+**Background**: Hugging Face is a major platform for hosting AI models, datasets, and demo apps \(Spaces\). GLM 5.2 is an open-source large language model developed by Z.ai \(formerly Zhipu AI\), released under the MIT license with a 1 million token context window. AI agent frameworks allow autonomous execution of tasks by LLMs, but they introduce new security risks such as prompt injection and code execution vulnerabilities.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/GLM_5.2">GLM 5.2</a></li>
+<li><a href="https://huggingface.co/docs/hub/spaces">Spaces · Hugging Face</a></li>
+<li><a href="https://ghaznix.com/zh/blogs/prompt-injection-attacks-on-ai-systems/">提示词注入：人工 智 能 时代的最大 漏 洞 及其防御手段 | Free Online Form...</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#security incident`, `#AI agent`, `#LLM security`, `#Hugging Face`, `#supply chain security`
 
 ---
 
 <a id="item-7"></a>
-## [Hugging Face Discloses AI Agent Attack, Commercial LLMs Refuse Forensics Help](https://huggingface.co/blog/security-incident-july-2026) ⭐️ 8.0/10
+## [Trump administration may restrict US use of Chinese open-weight AI models](https://www.axios.com/2026/07/20/ai-us-china-open-source-kimi) ⭐️ 8.0/10
 
-Hugging Face disclosed a July 2026 security incident where attackers used autonomous AI agents to exploit two code execution vulnerabilities in dataset processing pipelines, stealing internal datasets and service credentials. The company found that commercial LLM APIs refused to assist with forensic log analysis due to safety guardrails, forcing the team to use the locally deployed GLM 5.2 model to analyze over 17,000 attack records. This incident highlights a novel threat where AI agents are used for automated lateral movement and data theft on AI infrastructure, and reveals a critical limitation of commercial LLMs—their safety guardrails can hinder legitimate forensic work. It underscores the need for AI platforms to prepare for AI-driven attacks and for models to support security use cases without compromising safety. The attack occurred over a weekend, executing tens of thousands of operations and moving laterally across multiple internal clusters. Hugging Face confirmed that public models, datasets, and Spaces were not tampered with, and the software supply chain remained clean. The company has patched vulnerabilities, removed attacker footholds, rebuilt affected nodes, rotated affected credentials, and enhanced monitoring.
-
-telegram · zaihuapd · Jul 20, 10:41
-
-**Background**: Hugging Face is a major platform for hosting machine learning models, datasets, and Spaces \(demo apps\). GLM 5.2 is a recently released model optimized for long-horizon tasks with a 1M-token context window, and it can be deployed locally. AI agents are autonomous programs that can plan and execute actions; in this incident, they drove the attack by exploiting vulnerabilities and moving across systems.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://huggingface.co/zai-org/GLM-5.2">zai-org/GLM-5.2 · Hugging Face</a></li>
-<li><a href="https://github.com/zai-org/GLM-5">GitHub - zai-org/GLM-5: GLM-5: From Vibe Coding to Agentic ...</a></li>
-<li><a href="https://z.ai/blog/glm-5.2">GLM-5.2: Built for Long-Horizon Tasks - z.ai</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#security`, `#AI agents`, `#Hugging Face`, `#LLM`, `#forensics`
-
----
-
-<a id="item-8"></a>
-## [Trump Admin May Restrict US Firms from Using Chinese Open-Weight AI Models](https://www.axios.com/2026/07/20/ai-us-china-open-source-kimi) ⭐️ 8.0/10
-
-Axios reports that the Trump administration is considering restrictions on US companies using Chinese open-weight AI models, prompted by the strong performance of the Kimi K3 model. The approach is likely to be a soft blockade via procurement rules and entity list threats rather than a hard ban. This policy could reshape the open-source AI ecosystem and intensify US-China tech competition, potentially limiting access to cost-effective, high-performing models for US businesses. It also highlights the tension between closed-source giants like OpenAI and open-weight models. Kimi K3 is a 2.8 trillion-parameter open-weight model with a 1 million-token context window, built on Kimi Delta Attention technology. The proposed restrictions are reportedly driven by advocates of lighter regulation being overruled, and external AI advisor David Sacks criticized the move as an attempt to stifle open-source competition.
+According to Axios, the Trump administration is considering new restrictions to prevent US companies from using Chinese open-weight AI models, particularly Kimi K3, due to its strong performance. The approach would likely involve bureaucratic hurdles rather than outright bans. This policy could reshape the global AI landscape by limiting US access to cost-effective Chinese open-weight models, potentially stifling innovation and competition. It highlights the escalating AI rivalry between the US and China and draws criticism from industry figures who accuse closed-source giants of using regulation to suppress open-source alternatives. Kimi K3 is a 2.8 trillion parameter MoE model with native vision understanding and a 100k token context window, reportedly rivaling top models from OpenAI and Anthropic. The administration’s softer approach includes procurement rules, entity list threats, and public pressure rather than a direct ban.
 
 telegram · zaihuapd · Jul 20, 11:49
 
-**Background**: Open-weight AI models make the trained model weights publicly available, allowing developers to host, fine-tune, and adapt them, but they are not fully open source as training data and code may not be disclosed. Kimi K3 is the world&\#x27;s first open 3 trillion-class model, rivaling proprietary models in coding and reasoning tasks while being more cost-effective. The US government has previously warned about risks of Chinese AI models but hesitated to impose restrictions.
+**Background**: Open-weight models are AI models whose trained parameters are publicly released, allowing developers to fine-tune and deploy them with fewer restrictions than fully closed models. Kimi K3, developed by Moonshot AI, is a leading Chinese open-weight model that has demonstrated performance comparable to the best US proprietary models, causing concern among US policymakers about national security and technological leadership.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://openlm.ai/kimi-k3/">Kimi K3 - openlm.ai</a></li>
-<li><a href="https://www.kimi.com/en">Kimi AI with K3 | Built for Agentic Coding &amp; Knowledge Work</a></li>
+<li><a href="https://www.cyzone.cn/article/840189.html">Kimi K 3 ：很强，很贵，很爱给你炫技 - 创业邦</a></li>
+<li><a href="https://www.knews.com.tw/news/CC3E7668CD874E36905E339E78C40510">「DeepSeek時刻」重演？ 一文搞懂月之暗面 Kimi ... | 知新聞</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI policy`, `#open-source models`, `#US-China`, `#Kimi K3`, `#regulation`
+**Tags**: `#AI政策`, `#中美竞争`, `#开源模型`, `#Kimi K3`, `#特朗普政府`
 
 ---
