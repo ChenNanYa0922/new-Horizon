@@ -126,8 +126,7 @@ class DailySummarizer:
             "---\n\n"
         )
 
-        # TOC
-        # TOC：目录标题直接链接新闻原文，兼容企业微信
+        # TOC：标题直接链接新闻原文，兼容企业微信
         toc_entries = []
         for i, item in enumerate(items):
             _t = item.metadata.get(f"title_{language}") or item.title
