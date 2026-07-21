@@ -142,7 +142,7 @@ class DailySummarizer:
             toc_entries.append(
                 f"{i + 1}. {title_link} ⭐️ {score}/10"
             )
-
+        toc = "\n".join(toc_entries) + "\n\n---\n\n"
         parts = [self._format_item(item, labels, language, i + 1) for i, item in enumerate(items)]
 
         return header + toc + "".join(parts)
