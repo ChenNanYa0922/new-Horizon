@@ -2,8 +2,8 @@ name: Daily Horizon Summary
 
 on:
   schedule:
-    # GitHub Actions cron uses UTC. This runs daily at 08:15 Asia/Shanghai.
-    - cron: '15 0 * * *'
+    # Temporary test cadence. GitHub Actions cron uses UTC.
+    - cron: '*/5 * * * *'
   workflow_dispatch:      # Allow manual trigger
 
 concurrency:
