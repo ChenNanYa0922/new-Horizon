@@ -127,15 +127,22 @@ class DailySummarizer:
         )
 
         # TOC
+        # TOC：目录标题直接链接新闻原文，兼容企业微信
         toc_entries = []
         for i, item in enumerate(items):
             _t = item.metadata.get(f"title_{language}") or item.title
             t = _escape_markdown(_t)
+        
             if language == "zh":
                 t = _pangu(t)
+        
             score = item.ai_score or "?"
-            toc_entries.append(f"{i + 1}. [{t}](#item-{i + 1}) \u2b50\ufe0f {score}/10")
-        toc = "\n".join(toc_entries) + "\n\n---\n\n"
+            url = _safe_url(item.url)
+            title_link = f"[{t}]({url})" if url else t
+        
+            toc_entries.append(
+                f"{i + 1}. {title_link} ⭐️ {score}/10"
+            )
 
         parts = [self._format_item(item, labels, language, i + 1) for i, item in enumerate(items)]
 
