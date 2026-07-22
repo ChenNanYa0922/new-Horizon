@@ -552,14 +552,20 @@ class WebhookNotifier:
 
             return [overview_message] + item_messages
 
+        overview = summarizer.generate_webhook_overview(
+            important_items,
+            date,
+            all_items_count,
+            language=lang,
+        )
         return [
             {
                 **base_vars,
                 "message_title": (
-                    f"Horizon {date} 日报" if lang == "zh" else f"Horizon {date} Daily"
+                    f"每日速递 - {date}" if lang == "zh" else f"Daily Digest - {date}"
                 ),
                 "message_kind": "summary",
-                "summary": summary,
+                "summary": overview,
             }
         ]
 
