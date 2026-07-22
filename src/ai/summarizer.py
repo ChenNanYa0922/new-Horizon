@@ -67,7 +67,7 @@ LABELS = {
         ),
     },
     "zh": {
-        "header": "Horizon 每日速递",
+        "header": "每日速递",
         "source": "来源",
         "background": "背景",
         "discussion": "社区讨论",
@@ -163,13 +163,11 @@ class DailySummarizer:
             header = (
                 f"# {labels['header']} - {date}\n\n"
                 f"> 从 {total_fetched} 条内容中筛选出 {len(items)} 条重要资讯。\n\n"
-                "下面会按新闻逐条发送详情，你可以只看感兴趣的标题。\n\n"
             )
         else:
             header = (
                 f"# {labels['header']} - {date}\n\n"
                 f"> Selected {len(items)} important items from {total_fetched} fetched items.\n\n"
-                "Details will be sent item by item so you can read only the topics you care about.\n\n"
             )
 
         entries = []
