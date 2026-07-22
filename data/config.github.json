@@ -107,26 +107,27 @@
     }
   },
   "filtering": {
-    "ai_score_threshold": 8.0,
-    "time_window_hours": 24
+    "ai_score_threshold": 8,
+    "time_window_hours": 24,
+    "max_items": 10
   },
   "webhook": {
-  "enabled": true,
-  "url_env": "HORIZON_WEBHOOK_URL",
-  "delivery": "summary",
-  "overview_position": "first",
-  "platform": "generic",
-  "layout": "markdown",
-  "fallback_layout": "markdown",
-  "languages": [
-    "zh"
-  ],
-  "request_body": {
-    "msgtype": "markdown",
-    "markdown": {
-      "content": "# Horizon AI 日报\n\n#{summary?limit=1000&split=\n}"
-    }
-  },
-  "headers": ""
-}
+    "enabled": true,
+    "url_env": "HORIZON_WEBHOOK_URL",
+    "delivery": "summary",
+    "overview_position": "first",
+    "platform": "generic",
+    "layout": "markdown",
+    "fallback_layout": "markdown",
+    "languages": [
+      "zh"
+    ],
+    "request_body": {
+      "msgtype": "markdown",
+      "markdown": {
+        "content": "#{summary?limit=3000&split=---}"
+      }
+    },
+    "headers": ""
+  }
 }
