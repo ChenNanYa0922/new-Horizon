@@ -2,8 +2,8 @@ name: Daily Horizon Summary
 
 on:
   schedule:
-    # GitHub Actions cron uses UTC. This runs daily at 09:11 Asia/Shanghai.
-    - cron: '11 1 * * *'
+    # GitHub Actions cron uses UTC. Start at 05:53 Asia/Shanghai so the webhook is delivered around 09:11 after processing.
+    - cron: '53 21 * * *'
   workflow_dispatch:      # Allow manual trigger
 
 concurrency:
